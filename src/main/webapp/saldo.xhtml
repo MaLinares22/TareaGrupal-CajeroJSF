@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:ui="jakarta.faces.facelets">
+
+<ui:composition template="/template/layout.xhtml">
+    <ui:define name="content">
+        <h2>Consulta de Saldo</h2>
+        
+        <h3>Cuenta: <span class="account-number">#{cajeroBean.clienteActual.numeroCuenta}</span></h3>
+        
+        <h:messages globalOnly="true" styleClass="messages messages-info"/>
+        
+        <div class="saldo-box">
+            <h2>Su saldo actual es:</h2>
+            <div class="saldo-cantidad">
+                L. #{cajeroBean.clienteActual.saldo}
+            </div>
+        </div>
+        
+        <div style="text-align: center;">
+            <h:button value="Volver al Menú" outcome="menu" 
+                     styleClass="btn"/>
+        </div>
+    </ui:define>
+</ui:composition>
+</html>

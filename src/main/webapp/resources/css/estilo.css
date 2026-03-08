@@ -1,0 +1,336 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a1928 0%, #1a2f3f 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+
+.container {
+    background: rgba(18, 28, 40, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid #2a3f4f;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px #2a3f4f inset;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+h2 {
+    color: #e0e5ec;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #c41e3a;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+h3 {
+    color: #b8c5d0;
+    margin: 20px 0;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #a0b0c0;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+    width: 100%;
+    padding: 15px;
+    background: #1e2c3a;
+    border: 2px solid #2a3f4f;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #e0e5ec;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+    border-color: #c41e3a;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.2);
+    background: #243542;
+}
+
+input::placeholder {
+    color: #4a5f6f;
+    opacity: 1;
+}
+
+
+button, .btn, input[type="submit"], input[type="button"] {
+    background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10px 0;
+    border: 1px solid #ff4d4d;
+    box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
+}
+
+button:hover, .btn:hover, input[type="submit"]:hover, input[type="button"]:hover {
+    background: linear-gradient(135deg, #8b0000 0%, #660000 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(196, 30, 58, 0.5);
+    border-color: #ff9999;
+}
+
+button:active, .btn:active {
+    transform: translateY(0);
+}
+
+
+.btn-danger {
+    background: linear-gradient(135deg, #8b0000 0%, #4a0000 100%);
+    border: 1px solid #ff4d4d;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #660000 0%, #330000 100%);
+}
+
+
+.btn-secondary {
+    background: linear-gradient(135deg, #2a3f4f 0%, #1a2f3f 100%);
+    border: 1px solid #4a6f8f;
+    box-shadow: none;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #1a2f3f 0%, #0a1f2f 100%);
+    border-color: #6f9fbf;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+.menu a {
+    display: block;
+    background: linear-gradient(135deg, #1e2c3a 0%, #0a1928 100%);
+    color: #e0e5ec;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    border: 1px solid #2a3f4f;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.menu a:hover {
+    background: linear-gradient(135deg, #2a3f4f 0%, #1a2f3f 100%);
+    transform: translateY(-2px);
+    border-color: #c41e3a;
+    box-shadow: 0 10px 25px rgba(196, 30, 58, 0.3);
+    color: white;
+}
+
+
+.messages {
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+    font-weight: 500;
+    border: 1px solid;
+}
+
+.messages-info {
+    background: linear-gradient(135deg, #1e3a3a 0%, #0a2a2a 100%);
+    color: #9fdfdf;
+    border-color: #2a5f5f;
+}
+
+.messages-error {
+    background: linear-gradient(135deg, #3a1e2a 0%, #2a0a1a 100%);
+    color: #ff9f9f;
+    border-color: #c41e3a;
+}
+
+
+.saldo-box {
+    background: linear-gradient(135deg, #0a1928 0%, #1a2f3f 100%);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    color: #e0e5ec;
+    margin: 20px 0;
+    border: 2px solid #c41e3a;
+    box-shadow: 0 10px 30px rgba(196, 30, 58, 0.2);
+}
+
+.saldo-box h2 {
+    color: #b8c5d0;
+    border-bottom: 1px solid #c41e3a;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.saldo-cantidad {
+    font-size: 56px;
+    font-weight: 300;
+    margin: 20px 0;
+    color: #c41e3a;
+    text-shadow: 0 0 20px rgba(196, 30, 58, 0.5);
+    letter-spacing: 2px;
+}
+
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #4a5f6f;
+    font-size: 12px;
+    border-top: 1px solid #2a3f4f;
+    padding-top: 20px;
+}
+
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-group .btn {
+    flex: 1;
+    margin: 0;
+}
+
+
+.info-text {
+    text-align: center;
+    color: #6f8f9f;
+    font-size: 13px;
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(26, 47, 63, 0.5);
+    border-radius: 10px;
+    border: 1px solid #2a3f4f;
+}
+
+small {
+    color: #6f8f9f;
+    font-size: 12px;
+    display: block;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(196, 30, 58, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(196, 30, 58, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(196, 30, 58, 0); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+
+.account-number {
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    color: #c41e3a;
+    background: #0a1928;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid #c41e3a;
+    display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .saldo-cantidad {
+        font-size: 40px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a1928;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c41e3a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8b0000;
+}

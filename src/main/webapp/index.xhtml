@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:ui="jakarta.faces.facelets">
+
+<ui:composition template="/template/layout.xhtml">
+    <ui:define name="content">
+        <h2>Cajero Automatico</h2>
+        
+        <h:messages globalOnly="true" styleClass="messages messages-error"/>
+        
+        <h:form>
+            <div class="form-group">
+                <label>Numero de Cuenta:</label>
+                <h:inputText value="#{cajeroBean.numeroCuenta}" 
+                           required="true"
+                           placeholder="Ingrese su número de cuenta"/>
+            </div>
+            
+            <div class="form-group">
+                <label>PIN:</label>
+                <h:inputSecret value="#{cajeroBean.pin}" 
+                             required="true"
+                             placeholder="Ingrese su PIN"/>
+            </div>
+            
+            <h:commandButton value="Ingresar" 
+                           action="#{cajeroBean.autenticar}" 
+                           styleClass="btn"/>
+        </h:form>
+        
+        <div class="info-text">
+            <p>Cuentas de prueba: 1001, 1002, 1003, 1004, 1005</p>
+            <p>PIN: 1234, 2345, 3456, 4567, 5678 respectivamente</p>
+        </div>
+    </ui:define>
+</ui:composition>
+</html>
