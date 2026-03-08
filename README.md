@@ -13,3 +13,8 @@ Se debe Ejecutar En Eclipse IDE, por compatibilidad.
 - Depositos (con validacion de entrada)
 - Retiros (con validacion de saldo)
 - Consulta de saldo
+
+--Integrantes--
+Manuel Alejandro Linares Valenzuela
+Michael Javier Turcios Aparicios
+Jenson Geovany Arita Reyes
